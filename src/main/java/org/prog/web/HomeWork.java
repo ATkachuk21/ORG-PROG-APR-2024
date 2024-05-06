@@ -24,7 +24,6 @@ public class HomeWork {
             // WebElement loginBtn = driver.findElement(By.className("auth__enter-password"));
             //  loginBtn.click();
 
-
             WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(3L));
             WebElement pwdBtnWait = driverWait.until(
                     ExpectedConditions.presenceOfElementLocated(By.className("auth__enter-password")));
