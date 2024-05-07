@@ -3,7 +3,7 @@
 <suite name="Prog" verbose="1">
     <test name="All UA Tests">
         <classes>
-            <class name="org.prog.testng.HomeTNG"/>
+            <class name="org.prog.work.HomeTNG"/>
         </classes>
     </test>
 
