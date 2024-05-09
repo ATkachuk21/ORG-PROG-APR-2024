@@ -13,12 +13,12 @@ import java.util.List;
 public class HomeWork {
 
     public static void main(String[] args) {
-        //start browser
+
         WebDriver driver = new ChromeDriver();
         try {
-            //full screen
+
             driver.manage().window().maximize();
-            //load allo ua
+
             driver.get("https://allo.ua/");
 
             WebElement profileBtn = driver.findElement(By.className("mh-profile"));
