@@ -11,30 +11,28 @@ import java.time.Duration;
 import java.util.List;
 
 public class HomeWork {
+
     public static void main(String[] args) {
+        //start browser
         WebDriver driver = new ChromeDriver();
         try {
-
-
+            //full screen
+            driver.manage().window().maximize();
+            //load allo ua
             driver.get("https://allo.ua/");
 
             WebElement profileBtn = driver.findElement(By.className("mh-profile"));
             profileBtn.click();
-
-            // WebElement loginBtn = driver.findElement(By.className("auth__enter-password"));
-            //  loginBtn.click();
-
             WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(3L));
             WebElement pwdBtnWait = driverWait.until(
                     ExpectedConditions.presenceOfElementLocated(By.className("auth__enter-password")));
             pwdBtnWait.click();
-
-            WebElement phone = driver.findElement(By.className("phoneEmail"));
-            phone.click();
-    } finally {
-        driver.quit();
-    }
-
-
+            WebElement loginBtn = driverWait.until(
+                    ExpectedConditions.presenceOfElementLocated(By.className("a-button--primary")));
+            loginBtn.click();
+            System.out.println("done!");
+        } finally {
+            driver.quit();
+        }
     }
 }
