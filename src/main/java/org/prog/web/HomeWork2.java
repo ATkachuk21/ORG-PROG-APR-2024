@@ -14,16 +14,16 @@ public class HomeWork2 {
         WebDriver driver = new ChromeDriver();
         try {
             driver.get("https://allo.ua/");
-            WebElement profileBtn = driver.findElement(By.className("mh-profile"));
+            WebElement profileBtn = driver.findElement(By.className("search-form__input"));
             profileBtn.click();
 
-            // WebElement loginBtn = driver.findElement(By.className("auth__enter-password"));
-            //  loginBtn.click();
+        //     WebElement loginBtn = driver.findElement(By.className("auth__enter-password"));
+        //      loginBtn.click();
 
-            WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(3L));
-            WebElement pwdBtnWait = driverWait.until(
-                    ExpectedConditions.presenceOfElementLocated(By.className("auth__enter-password")));
-            pwdBtnWait.click();
+        //    WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(3L));
+        //    WebElement pwdBtnWait = driverWait.until(
+        //            ExpectedConditions.presenceOfElementLocated(By.className("auth__enter-password")));
+        //    pwdBtnWait.click();
 
             WebElement phone = driver.findElement(By.className("phoneEmail"));
             phone.click();
